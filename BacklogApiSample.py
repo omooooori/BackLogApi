@@ -22,8 +22,8 @@ def addIssue(summary, parent_issue_id):
     print(r.text)
 
 
-parent_issue_id = 1587
-jira_issue_id = '(SB-2048)'
+parent_issue_id = 12449537
+jira_issue_id = '(SB-2044)'
 summary1  = jira_issue_id + '現状調査'
 summary2  = jira_issue_id + 'JIRA起票'
 summary3  = jira_issue_id + 'ユーザーへの影響範囲調査'
