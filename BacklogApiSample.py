@@ -19,6 +19,14 @@ def addIssueImpl(summary, parent_issue_id, issue_type_id):
     print(r.text)
 
 
+def createIssue(summary_list, parent_issue_id, issue_type_id):
+    for summary in summary_list:
+        print(summary)
+        addIssueImpl(summary, parent_issue_id, issue_type_id)
+        sleep(1)
+
+
+
 def addDefectIssue():
     parent_issue_id = 12449537
     jira_issue_id = '(SB-2044)'
@@ -53,11 +61,7 @@ def addDefectIssue():
         summary12, 
         summary13
         ]
-
-    for summary in summary_list:
-        print(summary)
-        addIssueImpl(summary, parent_issue_id, issue_type_id)
-        sleep(1)
+    createIssue(summary_list, parent_issue_id, issue_type_id)
 
 
 def addNewTask():
@@ -105,11 +109,8 @@ def addNewTask():
         summary18
         ]
 
-    for summary in summary_list:
-        print(summary)
-        addIssueImpl(summary, parent_issue_id, issue_type_id)
-        sleep(1)
-
+    createIssue(summary_list, parent_issue_id, issue_type_id)
+    
 
 addNewTask()
 #addDefectIssue()
