@@ -26,7 +26,6 @@ def createIssue(summary_list, parent_issue_id, issue_type_id):
         sleep(1)
 
 
-
 def addDefectIssue():
     parent_issue_id = 12449537
     jira_issue_id = '(SB-2044)'
@@ -60,7 +59,7 @@ def addDefectIssue():
         summary11, 
         summary12, 
         summary13
-        ]
+    ]
     createIssue(summary_list, parent_issue_id, issue_type_id)
 
 
@@ -107,8 +106,7 @@ def addNewTask():
         summary16, 
         summary17, 
         summary18
-        ]
-
+    ]
     createIssue(summary_list, parent_issue_id, issue_type_id)
 
 
