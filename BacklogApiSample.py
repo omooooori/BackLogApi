@@ -2,12 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import requests
-import datetime
 from time import sleep
 
 def addDefectIssueImpl(summary, parent_issue_id):
-    # Set the API endpoint
-    # Backlog API v2
     url = "https://topcon-thq.backlog.com/api/v2/issues"
     payload = {
             'apiKey':        'NFjgQUCNSFQg19KTJU94ZYg5oykFrnwcwbmypHZJvzdDuvPdvV50D4nI46chqC50',
@@ -81,8 +78,6 @@ def addDefectIssue():
 
 
 def addNewTaskImpl(summary, parent_issue_id):
-    # Set the API endpoint
-    # Backlog API v2
     url = "https://topcon-thq.backlog.com/api/v2/issues"
     payload = {
             'apiKey':        'NFjgQUCNSFQg19KTJU94ZYg5oykFrnwcwbmypHZJvzdDuvPdvV50D4nI46chqC50',
