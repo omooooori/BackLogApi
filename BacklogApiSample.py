@@ -4,7 +4,7 @@
 import requests
 from time import sleep
 
-def addIssueImpl(summary, parent_issue_id, issue_type_id):
+def createIssueImpl(summary, parent_issue_id, issue_type_id):
     url = "https://topcon-thq.backlog.com/api/v2/issues"
     payload = {
             'apiKey':        'NFjgQUCNSFQg19KTJU94ZYg5oykFrnwcwbmypHZJvzdDuvPdvV50D4nI46chqC50',
@@ -22,7 +22,7 @@ def addIssueImpl(summary, parent_issue_id, issue_type_id):
 def createIssue(summary_list, parent_issue_id, issue_type_id):
     for summary in summary_list:
         print(summary)
-        addIssueImpl(summary, parent_issue_id, issue_type_id)
+        createIssueImpl(summary, parent_issue_id, issue_type_id)
         sleep(1)
 
 
@@ -110,7 +110,7 @@ def addNewTask():
         ]
 
     createIssue(summary_list, parent_issue_id, issue_type_id)
-    
+
 
 addNewTask()
 #addDefectIssue()
