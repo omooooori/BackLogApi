@@ -4,13 +4,13 @@
 import requests
 from time import sleep
 
-def addDefectIssueImpl(summary, parent_issue_id):
+def addIssueImpl(summary, parent_issue_id, issue_type_id):
     url = "https://topcon-thq.backlog.com/api/v2/issues"
     payload = {
             'apiKey':        'NFjgQUCNSFQg19KTJU94ZYg5oykFrnwcwbmypHZJvzdDuvPdvV50D4nI46chqC50',
             'projectId':     45012,
             'summary':       summary,
-            'issueTypeId':   204076,
+            'issueTypeId':   issue_type_id,
             'parentIssueId': parent_issue_id,
             'priorityId':    3,
             'assigneeId':    278582,
@@ -50,46 +50,33 @@ def addDefectIssue():
     print(summary12)
     print(summary13)
 
-    addDefectIssueImpl(summary1, parent_issue_id)
-    sleep(1)
-    addDefectIssueImpl(summary2, parent_issue_id)
-    sleep(1)
-    addDefectIssueImpl(summary3, parent_issue_id)
-    sleep(1)
-    addDefectIssueImpl(summary4, parent_issue_id)
-    sleep(1)
-    addDefectIssueImpl(summary5, parent_issue_id)
-    sleep(1)
-    addDefectIssueImpl(summary6, parent_issue_id)
-    sleep(1)
-    addDefectIssueImpl(summary7, parent_issue_id)
-    sleep(1)
-    addDefectIssueImpl(summary8, parent_issue_id)
-    sleep(1)
-    addDefectIssueImpl(summary9, parent_issue_id)
-    sleep(1)
-    addDefectIssueImpl(summary10, parent_issue_id)
-    sleep(1)
-    addDefectIssueImpl(summary11, parent_issue_id)
-    sleep(1)
-    addDefectIssueImpl(summary12, parent_issue_id)
-    sleep(1)
-    addDefectIssueImpl(summary13, parent_issue_id)
+    issue_type_id = 204076
 
-
-def addNewTaskImpl(summary, parent_issue_id):
-    url = "https://topcon-thq.backlog.com/api/v2/issues"
-    payload = {
-            'apiKey':        'NFjgQUCNSFQg19KTJU94ZYg5oykFrnwcwbmypHZJvzdDuvPdvV50D4nI46chqC50',
-            'projectId':     45012,
-            'summary':       summary,
-            'issueTypeId':   714570,
-            'parentIssueId': parent_issue_id,
-            'priorityId':    3,
-            'assigneeId':    278582,
-    }
-    r = requests.post(url, params=payload)
-    print(r.text)
+    addIssueImpl(summary1, parent_issue_id, issue_type_id)
+    sleep(1)
+    addIssueImpl(summary2, parent_issue_id, issue_type_id)
+    sleep(1)
+    addIssueImpl(summary3, parent_issue_id, issue_type_id)
+    sleep(1)
+    addIssueImpl(summary4, parent_issue_id, issue_type_id)
+    sleep(1)
+    addIssueImpl(summary5, parent_issue_id, issue_type_id)
+    sleep(1)
+    addIssueImpl(summary6, parent_issue_id, issue_type_id)
+    sleep(1)
+    addIssueImpl(summary7, parent_issue_id, issue_type_id)
+    sleep(1)
+    addIssueImpl(summary8, parent_issue_id, issue_type_id)
+    sleep(1)
+    addIssueImpl(summary9, parent_issue_id, issue_type_id)
+    sleep(1)
+    addIssueImpl(summary10, parent_issue_id, issue_type_id)
+    sleep(1)
+    addIssueImpl(summary11, parent_issue_id, issue_type_id)
+    sleep(1)
+    addIssueImpl(summary12, parent_issue_id, issue_type_id)
+    sleep(1)
+    addIssueImpl(summary13, parent_issue_id, issue_type_id)
 
 
 def addNewTask():
@@ -133,41 +120,43 @@ def addNewTask():
     print(summary17)
     print(summary18)
 
-    addNewTaskImpl(summary1, parent_issue_id)
+    issue_type_id = 714570
+
+    addIssueImpl(summary1, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary2, parent_issue_id)
+    addIssueImpl(summary2, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary3, parent_issue_id)
+    addIssueImpl(summary3, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary4, parent_issue_id)
+    addIssueImpl(summary4, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary5, parent_issue_id)
+    addIssueImpl(summary5, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary6, parent_issue_id)
+    addIssueImpl(summary6, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary7, parent_issue_id)
+    addIssueImpl(summary7, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary8, parent_issue_id)
+    addIssueImpl(summary8, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary9, parent_issue_id)
+    addIssueImpl(summary9, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary10, parent_issue_id)
+    addIssueImpl(summary10, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary11, parent_issue_id)
+    addIssueImpl(summary11, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary12, parent_issue_id)
+    addIssueImpl(summary12, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary13, parent_issue_id)
+    addIssueImpl(summary13, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary14, parent_issue_id)
+    addIssueImpl(summary14, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary15, parent_issue_id)
+    addIssueImpl(summary15, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary16, parent_issue_id)
+    addIssueImpl(summary16, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary17, parent_issue_id)
+    addIssueImpl(summary17, parent_issue_id, issue_type_id)
     sleep(1)
-    addNewTaskImpl(summary18, parent_issue_id)
+    addIssueImpl(summary18, parent_issue_id, issue_type_id)
 
 addNewTask()
 #addDefectIssue()
