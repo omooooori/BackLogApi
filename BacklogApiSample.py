@@ -31,19 +31,14 @@ def addDefectIssue():
     jira_issue_id = '(SB-2044)'
     issue_type_id = 204076
 
-    summary1  = jira_issue_id + '現状調査'
-    summary2  = jira_issue_id + 'JIRA起票'
-    summary3  = jira_issue_id + 'ユーザーへの影響範囲調査'
-    summary4  = jira_issue_id + '原因調査'
-    summary5  = jira_issue_id + '修正の影響範囲調査'
-    summary6  = jira_issue_id + '修正の仕様作成'
-    summary7  = jira_issue_id + '修正前レビュー'
-    summary8  = jira_issue_id + '修正前レビュー後アップデート'
-    summary9  = jira_issue_id + 'UI設計'
-    summary10  = jira_issue_id + 'ロジック設計'
-    summary11  = jira_issue_id + '修正'
-    summary12  = jira_issue_id + 'コードレビュー'
-    summary13  = jira_issue_id + 'テスト'
+    summary1  = jira_issue_id + '分析'
+    summary2  = jira_issue_id + '分析結果レビュー'
+    summary3  = jira_issue_id + '原因調査'
+    summary4  = jira_issue_id + '設計仕様書作成'
+    summary5  = jira_issue_id + '設計レビュー'
+    summary6  = jira_issue_id + '修正'
+    summary7  = jira_issue_id + 'コードレビュー'
+    summary10  = jira_issue_id + 'Verification'
 
     summary_list = [
         summary1, 
@@ -56,9 +51,6 @@ def addDefectIssue():
         summary8, 
         summary9, 
         summary10, 
-        summary11, 
-        summary12, 
-        summary13
     ]
     createIssue(summary_list, parent_issue_id, issue_type_id)
 
