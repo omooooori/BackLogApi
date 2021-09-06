@@ -38,7 +38,7 @@ def addDefectIssue():
     summary5  = jira_issue_id + '設計レビュー'
     summary6  = jira_issue_id + '修正'
     summary7  = jira_issue_id + 'コードレビュー'
-    summary10  = jira_issue_id + 'Verification'
+    summary8  = jira_issue_id + 'Verification'
 
     summary_list = [
         summary1, 
@@ -49,8 +49,6 @@ def addDefectIssue():
         summary6, 
         summary7, 
         summary8, 
-        summary9, 
-        summary10, 
     ]
     createIssue(summary_list, parent_issue_id, issue_type_id)
 
