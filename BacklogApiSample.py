@@ -4,20 +4,32 @@
 import requests
 from time import sleep
 
-def createIssueImpl(summary, parent_issue_id, issue_type_id):
-    url = "https://topcon-thq.backlog.com/api/v2/issues"
-    payload = {
-            'apiKey':        'NFjgQUCNSFQg19KTJU94ZYg5oykFrnwcwbmypHZJvzdDuvPdvV50D4nI46chqC50',
-            'projectId':     45012,
-            'summary':       summary,
-            'issueTypeId':   issue_type_id,
-            'parentIssueId': parent_issue_id,
-            'priorityId':    3,
-            'assigneeId':    278582,
-    }
-    r = requests.post(url, params=payload)
-    print(r.text)
+prot = 'https://'
+space_name = 'topcon-thq.backlog.com' #初期値空白  jsonより入力
+api_path = '/api/v2/issues'
+key_para = '?apiKey='
+api_key = 'NFjgQUCNSFQg19KTJU94ZYg5oykFrnwcwbmypHZJvzdDuvPdvV50D4nI46chqC50'
+url = prot + space_name + api_path + key_para + api_key
 
+headers = {
+       'Content-Type': 'application/x-www-form-urlencoded',
+       'charset': 'utf-8' 
+}
+
+def createIssueImpl(summary, parent_issue_id, issue_type_id):
+    payload = {
+            'projectId':          45012,
+            'summary':            summary,
+            'issueTypeId':        issue_type_id,
+            'parentIssueId':      parent_issue_id,
+            'priorityId':         3,
+            'assigneeId':         278582,
+            'customField_91464.1': 'SHIBA（監督さん3D）'
+    }
+    print(payload)
+    r = requests.post(url, params=payload, headers=headers)
+    print(r.status_code)
+    print(r.json())
 
 def createIssue(summary_list, parent_issue_id, issue_type_id):
     for summary in summary_list:
@@ -27,8 +39,8 @@ def createIssue(summary_list, parent_issue_id, issue_type_id):
 
 
 def addDefectIssue():
-    parent_issue_id = 12449537
-    jira_issue_id = '(SB-2044)'
+    parent_issue_id = 18840784
+    jira_issue_id = 'test　'
     issue_type_id = 204076
 
     summary1  = jira_issue_id + '分析'
@@ -100,5 +112,5 @@ def addNewTask():
     createIssue(summary_list, parent_issue_id, issue_type_id)
 
 
-addNewTask()
-#addDefectIssue()
+#addNewTask()
+addDefectIssue()
